@@ -20,7 +20,7 @@ body{
 }
 
 .w50{
-    width: 50%;
+    width: 105%;
     float: left;
     padding-right: 15px;
 }
@@ -53,16 +53,16 @@ body{
 
 .form-box h2{
     font-size: 30px;
-    color: #601460;
+    color: #390977;
 }
 
 .form-box p{
     font-weight: bold;
-    color: #7E57C2
+    color: #5d32a7;
 }
 
 .form-box p a{
-    color: #601460;
+    color: #390977;
     text-decoration: none;
     margin: 5px;
 }
@@ -80,7 +80,7 @@ form .input-group{
 }
 
 form .input-group label{
-    color: #601460;
+    color: #390977;
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
@@ -95,12 +95,12 @@ form .input-group input{
     border: 2px solid #7E57C2;
     padding: 15px;
     font-size: 15px;
-    color: #601460;
+    color: #390977;
     transition: all 0.4s ease;
 }
 
 form .input-group input:focus{
-    border-color: #601460;
+    border-color: #390977;
 }
 
 form .input-group button{
@@ -111,14 +111,26 @@ form .input-group button{
     outline: none;
     border: none;
     margin-top: 15px;
-    color: #601460;
+    color: #390977;
     cursor: pointer;
     font-size: 20px;
 }
 
 form .input-group button:hover{
-    background-color: #601460;
+    background-color: #390977;
     color: white;
+}
+
+form .input-group input::placeholder{
+    color: #5d32a7;
+}
+
+.fa-eye{
+    position: relative;
+    bottom: 30px ;
+    left: 350px;
+    cursor: pointer;
+    color:#5d32a7;
 }
 
 @media (max-width:930px){
@@ -135,6 +147,13 @@ form .input-group button:hover{
 }
 @media (max-width:500px){
     .w50{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width:500px){
+    .fa-eye{
         width: 100%;
         padding: 0;
     }
