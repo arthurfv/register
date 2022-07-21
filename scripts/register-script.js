@@ -26,7 +26,7 @@ btnConfirm.addEventListener('click', ()=>{
 
 let nome = document.querySelector('#name')
 let labelNome = document.querySelector('#labelNome')
-let validNome = false
+let validNome = true
 
 /*nome.addEventListener('keyup', () =>{
     if (nome.value.length <=10) {
@@ -44,7 +44,7 @@ let validNome = false
 
 let usuario = document.querySelector('#email')
 let labelUsuario = document.querySelector('#labelUsuario')
-let validUsuario = false
+let validUsuario = true
 
 /*usuario.addEventListener('keyup', () =>{
     if (usuario.value.length <=1) {
@@ -68,7 +68,6 @@ senha.addEventListener('keyup', () =>{
     if (senha.value.length <=5) {
     labelSenha.setAttribute('style', 'color:pink')
     labelSenha.innerHTML = 'Insira no mínimo 6 caracteres'
-    usuario.setAttribute()
     validSenha = false
     }else{
     labelSenha.setAttribute('style' ,'color:lightblue')
@@ -85,7 +84,6 @@ confirmar.addEventListener('keyup', () =>{
     if (senha.value != confirmar.value) {
     labelConfirmar.setAttribute('style', 'color:pink')
     labelConfirmar.innerHTML = 'Senhas devem ser iguais'
-    confirmar.setAttribute()
     validConfirmar = false
     }else{
     labelConfirmar.setAttribute('style' ,'color:lightblue')
@@ -95,16 +93,17 @@ confirmar.addEventListener('keyup', () =>{
 })
 
 function cadastrar(){
-    if (validNome && validUsuario && validSenha && validConfirmar){ 
+    if (validNome && validUsuario && validSenha && validConfirmar) {
+        let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
         /*Incremento*/
         listaUser.push({
         nomeCad: nome.value,
         userCad: usuario.value,
         senhaCad: senha.value,
-        dataCad: idade.value
         })
+        localStorage.setItem('listaUser', JSON.stringify(listaUser))
         alert('Sucess')
-        window.location.href =''
+        window.location.href ='file:///C:/Users/arthu/OneDrive/Documents/Projeto3/login.html'
     }else{
         alert('Preencha os campos corretamente')
     }

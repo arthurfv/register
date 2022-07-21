@@ -18,25 +18,27 @@
          <h2> Faça seu login</h2>
          <p>Não possui conta?<a href="register.html">Cadastre-se</a></p>
          <form action="#">
-
+            
+            <div id="messageError"></div>
+            
             <div class="input-group">
-                <label for="email">E-mail</label>
+                <label id="userLabel" for="email">E-mail</label>
                 <input type="email" id="email" placeholder="Digite seu e-mail" required>
             </div>
 
             <div class="input-group w50">
-                <label for="password">Senha</label>
+                <label id="senhaLabel" for="password">Senha</label>
                 <input type="password" id="password" placeholder="Digite sua senha" required>
-                <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+                <i id="eye" class="fa fa-eye" aria-hidden="true"></i>
             </div>
 
             <div class="input-group">
-                <button>Entrar</button>
+                <button onclick="entrar()">Entrar</button>
             </div>
     
          </form>
         </div>
     </div>
-    <script src=""></script>   
+    <script src="scripts/log.js"></script>   
 </body>
 </html>
